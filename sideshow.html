@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Our Memories Slideshow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="slideshow.js"></script>
+<script src="script.js"></script>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reasons.html">Reasons</a>
+        <a href="quiz.html">Love Quiz</a>
+        <a href="future.html">Future</a>
+        <a href="slideshow.html">Memories</a> <!-- ADD THIS -->
+      </nav>
+      
+
+<div class="card">
+  <h1>Our Beautiful Memories 📸💖</h1>
+
+  <div class="slideshow-container">
+    <img class="slide active" src="images/photo1.jpg">
+    <img class="slide" src="images/photo2.jpg">
+    <img class="slide" src="images/photo3.jpg">
+    <img class="slide" src="images/photo4.jpg">
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+  </div>
+
+  <p style="margin-top:15px;">Every picture tells a story with you 💕</p>
+</div>
+
+<script src="script.js"></script>
+<script src="slideshow.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Be My Valentine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="story.html">Our Story</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="reasons.html">Reasons</a>
+        <a href="quiz.html">Love Quiz</a>
+        <a href="future.html">Future</a>
+        <a href="slideshow.html">Memories</a> <!-- ADD THIS -->
+      </nav>
+      
+      <a href="slideshow.html" class="btn">See Our Memories 📸</a>
+
+<div class="card">
+  <h1>Nirali, will you be my Valentine? 💖</h1>
+
+  <div id="zone" style="position:relative;height:160px;margin-top:20px;">
+    <button id="yesBtn" style="position:absolute;left:15%;top:50%;transform:translateY(-50%)">Yes 💖</button>
+    <button id="noBtn" style="position:absolute;left:60%;top:50%;transform:translateY(-50%);background:#ddd;color:#333">No 🙈</button>
+  </div>
+
+  <div id="result" style="display:none;margin-top:20px;">
+    <h2>YAY!!! 🎉💘</h2>
+    <p>You just made me the happiest person alive 🥰</p>
+  </div>
+
+  <!-- 🌙 Secret Night Message -->
+  <div id="nightMessage">
+    🌙 It's night time... and I just wanted to say you're the last thought on my mind before I sleep 💖
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const zone = document.getElementById("zone");
+const result = document.getElementById("result");
+
+yesBtn.onclick = () => {
+  result.style.display = "block";
+  confetti({ particleCount: 250, spread: 120 });
+};
+
+zone.addEventListener("touchstart", moveNo);
+zone.addEventListener("mousemove", moveNo);
+
+function moveNo() {
+  const rect = zone.getBoundingClientRect();
+  const x = Math.random() * (rect.width - 80);
+  const y = Math.random() * (rect.height - 50);
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
